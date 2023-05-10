@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { Author } from '../model/authors.model';
-import { GetAuthorArgs } from '../dto/authors.dto';
+import { Author } from 'src/graphql.schema';
+import { GetAuthorArgs } from './authors.dto';
 
 @Injectable()
-export class AuthorsSerivce {
-	async findAll(args: GetAuthorArgs) {
+export class AuthorsService {
+	async findAll(args: GetAuthorArgs): Promise<Author> {
 		return {
 			id: 1,
 			lastName: args.lastName,
