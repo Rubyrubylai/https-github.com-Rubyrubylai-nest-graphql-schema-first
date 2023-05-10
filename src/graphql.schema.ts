@@ -25,4 +25,8 @@ export abstract class IQuery {
     abstract author(id: number): Nullable<Author> | Promise<Nullable<Author>>;
 }
 
+export abstract class IMutation {
+    abstract upvotePost(postId: number): Nullable<number> | Promise<Nullable<number>>;
+}
+
 type Nullable<T> = T | null;
