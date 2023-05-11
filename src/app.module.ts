@@ -13,7 +13,7 @@ import { PostsModule } from './posts/posts.module';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       typePaths: ['./**/*.graphql'],
-      definitions: {
+      definitions: { // 自動產生 ts
         path: join(process.cwd(), 'src/graphql.schema.ts'),
         outputAs: 'class',
       },

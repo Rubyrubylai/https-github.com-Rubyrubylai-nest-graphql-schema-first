@@ -1,0 +1,11 @@
+# https://the-guild.dev/graphql/config/docs/user/usage
+schema: "./src/"
+generates:
+  ./src/__generated__/authors/resolvers-types.ts:
+    plugins:
+      - "typescript"
+    schema: "./src/**/authors/schema.graphql"
+  ./src/__generated__/posts/resolvers-types.ts:
+    plugins:
+      - "typescript"
+    schema: "./src/**/posts/schema.graphql"

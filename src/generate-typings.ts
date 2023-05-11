@@ -1,3 +1,4 @@
+// 手凍產生 ts
 import { GraphQLDefinitionsFactory } from '@nestjs/graphql';
 import { join } from 'path';
 
